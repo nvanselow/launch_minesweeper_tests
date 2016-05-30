@@ -1,3 +1,9 @@
+# ignore file provided in the challenge
+cell.rb
+minefield.rb
+minesweeper.md
+minesweeper.rb
+
 *.gem
 *.rbc
 /.config
@@ -28,9 +34,9 @@ build/
 
 # for a library or gem, you might want to ignore these files since the code is
 # intended to run in multiple environments; otherwise, check them in:
-# Gemfile.lock
+Gemfile.lock
 # .ruby-version
 # .ruby-gemset
 
 # unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
-.rvmrc
+# .rvmrc
