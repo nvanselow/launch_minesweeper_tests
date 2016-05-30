@@ -249,6 +249,18 @@ describe Minefield do
       expect(board[3][5].revealed?).to eq(false)
       expect(board[4][5].revealed?).to eq(false)
     end
+
+    it "does not clear cells on the opposite side of the board (array[-1] problem)" do
+      clear_all_mines(board)
+      board[0][1].place_mine
+      board[1][1].place_mine
+      board[1][0].place_mine
+
+      minefield.clear(0, 0)
+
+      expect(board[0][5].revealed?).to eq(false)
+      expect(board[4][0].revealed?).to eq(false)
+    end
   end
 
   describe "#any_mines_detonated?" do
