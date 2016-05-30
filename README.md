@@ -14,7 +14,10 @@ This repository contains tests to help you complete the Minesweeper challenge.
 9. Run `rspec` in the terminal to run the tests.
 10. Complete the challenge using Test-Driven Development!
 
-**Note**
+*Optional:* You may want to add `--fail-fast` to the `.rspec` file to see
+only one failing test at a time.
+
+**Note:**
 Your final folder structure should look like this:
 
 - minesweeper
