@@ -39,4 +39,7 @@ Your final folder structure should look like this:
 helpful, but fair warning, they may lead you astray.
 2. These tests are based on my solution to the minesweeper challenge. I'm sure there
 are other ways to solve this challenge that may change the nature of the tests.
-3. If you have suggestions for improvement, DM me on the slack channel.
+3. These tests may not demonstrate best testing practices (e.g., testing private methods);
+however, those were included intentionally to help people move step-by-step through
+solving the challenge. 
+4. If you have suggestions for improvement, DM me on the slack channel.
