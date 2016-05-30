@@ -18,6 +18,10 @@ This repository contains tests to help you complete the Minesweeper challenge.
 only one failing test at a time.
 
 **Note:**
+If the minesweeper board is opening when you run your tests, comment out lines
+163 and 164 in `minesweeper.rb`.
+
+**Note:**
 Your final folder structure should look like this:
 
 - minesweeper
@@ -41,5 +45,5 @@ helpful, but fair warning, they may lead you astray.
 are other ways to solve this challenge that may change the nature of the tests.
 3. These tests may not demonstrate best testing practices (e.g., testing private methods);
 however, those were included intentionally to help people move step-by-step through
-solving the challenge. 
+solving the challenge.
 4. If you have suggestions for improvement, DM me on the slack channel.
