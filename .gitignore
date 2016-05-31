@@ -4,6 +4,8 @@ minefield.rb
 minesweeper.md
 minesweeper.rb
 
+.DS_Store
+
 *.gem
 *.rbc
 /.config
