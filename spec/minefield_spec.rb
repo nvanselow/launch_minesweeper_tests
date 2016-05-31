@@ -205,6 +205,36 @@ describe Minefield do
       expect(minefield.instance_variable_get(:@mine_detonated)).to eq(true)
     end
 
+    context "setup basic board with a few mines" do
+
+      before do
+        clear_all_mines(board)
+        board[3][2].place_mine
+        board[0][3].place_mine
+
+        minefield.clear(2, 3)
+      end
+
+      it "reveals all cells nearby (8 directions) that do not have a mine" do
+        expect(board[1][2].revealed?).to eq(true)
+        expect(board[1][3].revealed?).to eq(true)
+        expect(board[1][4].revealed?).to eq(true)
+        expect(board[2][2].revealed?).to eq(true)
+        expect(board[2][3].revealed?).to eq(true)
+        expect(board[2][4].revealed?).to eq(true)
+        expect(board[3][3].revealed?).to eq(true)
+        expect(board[3][4].revealed?).to eq(true)
+      end
+
+      it "does not reveal cells that have a mine" do
+        expect(board[3][2].revealed?).to eq(false)
+      end
+
+      it "does not throw an error when a cell by the edge of the board is selected" do
+        expect { minefield.clear(1, 5) }.not_to raise_error
+      end
+    end
+
     it "reveals all adjacent cells until a cell that contains a mine or cells adjacent to a mine" do
       clear_all_mines(board)
       board[0][1].place_mine
